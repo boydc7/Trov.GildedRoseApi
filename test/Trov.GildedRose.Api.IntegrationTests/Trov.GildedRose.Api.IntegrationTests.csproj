@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <Configurations>Debug;</Configurations>
+        <Platforms>AnyCPU</Platforms>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+    
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DefineConstants>DEBUG</DefineConstants>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DebugSymbols>true</DebugSymbols>
+        <Optimize>false</Optimize>
+    </PropertyGroup>
+    
+    <ItemGroup>
+      <PackageReference Include="FluentAssertions" Version="5.6.0" />
+      <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.1" />
+      <PackageReference Include="NUnit" Version="3.11.0" />
+      <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
+      <PackageReference Include="ServiceStack" Version="5.5.0" />
+      <PackageReference Include="ServiceStack.Kestrel" Version="5.5.0" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\Trov.GildedRose.Api.Dto\Trov.GildedRose.Api.Dto.csproj" />
+      <ProjectReference Include="..\..\src\Trov.GildedRose.Api.Services\Trov.GildedRose.Api.Services.csproj" />
+    </ItemGroup>
+        
+</Project>
